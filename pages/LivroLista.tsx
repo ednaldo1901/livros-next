@@ -18,7 +18,7 @@ const LivroLista = () => {
 
   const excluirLivro = async (codigo: number) => {
     const response = await fetch(`/api/livros/${codigo}`, {
-      method: 'DELETE'
+      method: 'DELETE',
     });
     return response.ok;
   };
@@ -51,12 +51,8 @@ const LivroLista = () => {
             </tr>
           </thead>
           <tbody>
-            {livros.map(livro => (
-              <LinhaLivro
-                key={livro.codigo}
-                livro={livro}
-                excluir={excluir}
-              />
+            {livros.map((livro) => (
+              <LinhaLivro key={livro.codigo} livro={livro} excluir={excluir} />
             ))}
           </tbody>
         </table>

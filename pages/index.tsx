@@ -2,8 +2,6 @@ import Head from 'next/head';
 import 'bootstrap/dist/css/bootstrap.css';
 import styles from '../styles/Home.module.css';
 
-
-
 const Home = () => {
   return (
     <div className={styles.container}>
